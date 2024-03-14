@@ -6,7 +6,7 @@
 	let apimessage = "Waiting for server...";
 
 	onMount(async () => {
-		let resp = await fetch("/api/greet").then((res) => res.json());
+		let resp = await fetch("/api/hello").then((res) => res.json());
 		console.log(resp);
 		apimessage = JSON.stringify(resp);
 	});
