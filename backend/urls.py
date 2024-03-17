@@ -16,12 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from svelte_spa.views import SpaView
+from backend.views import home
 from api.views import HelloApi  # Our hello API
+from htmx_spa.views import HtmxSpaView, HtmxFormsSpaView
+from svelte_spa.views import SvelteSpaView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("django.contrib.auth.urls")),
     path("api/hello", HelloApi.as_view()), # Our hello API
-    path("", SpaView.as_view(), name="spa"),
+    path("svelte", SvelteSpaView.as_view(), name="svelte"), # Our Svelte SPA index view
+    path("htmx", HtmxSpaView.as_view(), name="htmx"), # Our HTMX SPA index view
+    path("htmx_forms", HtmxFormsSpaView.as_view(), name="htmx"), # Our HTMX SPA Forms view
+    path("", home, name="home"),
 ]
