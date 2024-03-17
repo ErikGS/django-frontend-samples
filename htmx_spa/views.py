@@ -6,8 +6,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 def htmx(request):
-    # Some processing 
-    time.sleep(0.5)
+    # Simulate some processing
+    #time.sleep(0.5)
     # Processing End
     if request.htmx:
         return render(request, 'htmx_spa/components/dashboard.html')
@@ -15,8 +15,8 @@ def htmx(request):
         return render(request, 'htmx_spa/components/dashboard_full.html')
 
 def htmx_forms(request):
-    # Some processing 
-    time.sleep(0.5)
+    # Simulate some processing
+    #time.sleep(0.5)
     # Processing End
     if request.htmx:
         return render(request, 'htmx_spa/components/forms.html')
