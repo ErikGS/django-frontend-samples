@@ -18,7 +18,7 @@ from django.urls import path, include
 
 from backend.views import index
 from api.views import HelloApi  # Our hello API
-from htmx_spa.views import HtmxSpaView, HtmxFormsSpaView
+from htmx_spa.views import htmx, htmx_forms
 from svelte_spa.views import SvelteSpaView
 
 urlpatterns = [
@@ -26,7 +26,7 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path("api/hello", HelloApi.as_view()), # Our hello API
     path("svelte", SvelteSpaView.as_view(), name="svelte"), # Our Svelte SPA index view
-    path("htmx", HtmxSpaView.as_view(), name="htmx"), # Our HTMX SPA index view
-    path("htmx_forms", HtmxFormsSpaView.as_view(), name="htmx_forms"), # Our HTMX SPA Forms view
+    path("htmx", htmx, name="htmx"), # Our HTMX SPA index view
+    path("htmx_forms", htmx_forms, name="htmx_forms"), # Our HTMX SPA Forms view
     path("", index, name="index"),
 ]
