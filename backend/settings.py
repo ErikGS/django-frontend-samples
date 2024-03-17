@@ -38,12 +38,14 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "backend.spa",
+    "svelte_spa",
+    "htmx_spa",
+    "api",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",  # Our hello API
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # Our Svelte SPA
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -57,7 +59,7 @@ ROOT_URLCONF = "backend.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ["backend/templates"],  # Our hello API
+        "DIRS": ["templates"],  # Base template dir
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -109,15 +111,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, "backend", "staticfiles")
-STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_URL = "static/"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "backend", "static"),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 LOGIN_URL = reverse_lazy("login")
-LOGIN_REDIRECT_URL = reverse_lazy("spa")
-LOGOUT_REDIRECT_URL = reverse_lazy("spa")
+LOGIN_REDIRECT_URL = reverse_lazy("svelte")
+LOGOUT_REDIRECT_URL = reverse_lazy("svelte")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
