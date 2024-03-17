@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'django_htmx',
     "rest_framework",
     "svelte_spa",
     "htmx_spa",
