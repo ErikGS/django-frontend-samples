@@ -1,6 +1,7 @@
-# Django SPA with Svelte
+# Django HTMX and Svelte Frontend Samples
 
-A simple SPA sample with Django as the backend and Svelte in the frontend.
+- A simple HTMX sample with Django as the backend.
+- A simple SPA sample with Django as the backend and Svelte in the frontend.
 
 ## Getting Started
 
