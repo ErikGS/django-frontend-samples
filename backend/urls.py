@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from backend.spa.views import SpaView
-from backend.api.views import HelloApi  # Our hello API
+from svelte_spa.views import SpaView
+from api.views import HelloApi  # Our hello API
 
 urlpatterns = [
     path("admin/", admin.site.urls),
