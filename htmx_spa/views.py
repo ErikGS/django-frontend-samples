@@ -7,4 +7,4 @@ class HtmxSpaView(LoginRequiredMixin, TemplateView):
     template_name = "htmx_spa/index.html"
 
 class HtmxFormsSpaView(LoginRequiredMixin, TemplateView):
-    template_name = "htmx_spa/forms_full.html"
+    template_name = "htmx_spa/components/forms_full.html"
