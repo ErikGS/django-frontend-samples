@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from backend.views import home
+from backend.views import index
 from api.views import HelloApi  # Our hello API
 from htmx_spa.views import HtmxSpaView, HtmxFormsSpaView
 from svelte_spa.views import SvelteSpaView
@@ -28,5 +28,5 @@ urlpatterns = [
     path("svelte", SvelteSpaView.as_view(), name="svelte"), # Our Svelte SPA index view
     path("htmx", HtmxSpaView.as_view(), name="htmx"), # Our HTMX SPA index view
     path("htmx_forms", HtmxFormsSpaView.as_view(), name="htmx_forms"), # Our HTMX SPA Forms view
-    path("", home, name="home"),
+    path("", index, name="index"),
 ]
