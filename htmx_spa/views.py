@@ -1,10 +1,10 @@
 
 import time
 from django.shortcuts import render
-from django.views.generic import TemplateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def htmx(request):
     # Simulate some processing
     #time.sleep(0.5)
@@ -14,6 +14,7 @@ def htmx(request):
     else:
         return render(request, 'htmx_spa/components/dashboard_full.html')
 
+@login_required
 def htmx_forms(request):
     # Simulate some processing
     #time.sleep(0.5)
