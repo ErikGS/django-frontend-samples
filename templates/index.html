@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    {% load static %}
+    <title>{{ title }}</title>
+    <link rel='icon' type='image/png' href="{% static 'frontend/favicon.png' %}">
+    <!-- Default basic global styling -->
+    <link rel='stylesheet' href="{% static 'frontend/global.css' %}">
+</head>
+<body>
+    <h1>Hello world!</h1>
+    <span>{{ message }}</span>
+    <h2>Choose a frontend to view:</h2>
+    <ul>
+        <li><a href="htmx">HTMX Frontend</a></li>
+        <li><a href="svelte">Svelte Frontend</a></li>
+        <li><a href="api/hello">Test the API</a></li>
+    </ul>
+</body>
+</html>
