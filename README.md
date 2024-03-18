@@ -1,31 +1,28 @@
-# Django HTMX and Svelte Frontend Samples
+# Django setup with HTMX and Svelte front-ends
 
-- A simple HTMX sample with Django as the backend.
-- A simple SPA sample with Django as the backend and Svelte in the frontend.
+- A Django backend setup with a simple SSR page and a simple REST API;
+- A simple Svelte SPA;
+- A simple HTMX SPA.
+
+You just have to start the server, go to 'localhost:8000' and use the links to switch between applications: HTMX, Svelte, API-Response.
 
 ## Getting Started
 
-- This sample uses <a href="https://python-poetry.org/">Poetry</a> to manage and install dependencies of the Python project, you can install it with.
+- This sample uses <a href="https://python-poetry.org/">Poetry</a> to manage and install dependencies of Python projects, get it with:
   ```bash
   pip install poetry
   ```
 
-## Run
-- Open a shell in the base directory of this project (the one where 'pyproject.toml' is located);
-  
-- Create the virtual environment for the Python project and get it's shell by running the following command:
-  ```bash
-  poetry shell
-  ```
-
-- Install all Python's project dependecies (like Django itself) with:
+## Running
+- Install all Python's project dependecies (like Django) with:
   ```bash
   poetry install
   ```
-  This will install all dependencies in the isolated virtual environment;
+  *Poetry will install all dependencies in a isolated virtual environment;
   
-- After all dependencies succeed, initialize the DB with:
+- After everything is installed, open the virtual env. shell and initialize the DB with:
   ```bash
+  poetry shell
   py .\manage.py migrate
   ```
   
@@ -35,7 +32,7 @@
   ```
   Type the username (leave blank to use the suggested one) and hit enter, then type a password and hit enter (type the password again to confirm);
 
-- Start the server with:
+- Finally, start the server with:
   ```bash
   py .\manage.py runserver
   ```
@@ -44,13 +41,19 @@
   ```bash
   Starting development server at http://127.0.0.1:8000/
   ```
-  Visit the addres and after logged-in, you should see a Svelte page displaying a 'hello world' message from the server!
+  Visit the addres and after logged-in, you should see a simple static page displaying a 'hello world' message!
 
-- Change the URL to /api/hello to see the API response from Django! It should look like this:
+- Use the links to switch front-ends, or click REST-API to see the API response from Django! It should look like this:
   ```json
   {
     "message": "Hello world"
   }
   ```
-
+  OR, if you're not logged:
+  ```json
+  {
+    "detail": "Authentication credentials were not provided."
+  }
+  ```
+  
 - To stop the server just enter CTRL+C at any time in the console.
