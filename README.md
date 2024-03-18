@@ -4,7 +4,7 @@
 - A simple Svelte SPA;
 - A simple HTMX SPA.
 
-You just have to start the server, go to 'localhost:8000' and use the links to switch between applications: HTMX, Svelte, API-Response.
+Just start the server, go to 'localhost:8000' and use the links to switch between apps: HTMX, Svelte, API-Response.
 
 ## Getting Started
 
@@ -12,8 +12,7 @@ You just have to start the server, go to 'localhost:8000' and use the links to s
   ```bash
   pip install poetry
   ```
-
-## Running
+  
 - Install all Python's project dependecies (like Django) with:
   ```bash
   poetry install
