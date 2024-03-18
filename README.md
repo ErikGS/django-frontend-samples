@@ -40,7 +40,7 @@ Just start the server, go to 'localhost:8000' and use the links to switch betwee
   ```bash
   Starting development server at http://127.0.0.1:8000/
   ```
-  Visit the addres and you should see a simple static page displaying a 'hello world' message. You will be prompetd to login the first time you open an app, use the account you created earlier.
+  Visit the addres and you should see a simple static page displaying a 'hello world' message. You will be prompetd to login for the first time you open an app, use the account you created earlier.
 
 - Use the links to switch front-ends, or click REST-API to see the API response from Django! It should look like this:
   ```json
@@ -57,4 +57,4 @@ Just start the server, go to 'localhost:8000' and use the links to switch betwee
   
 - You can also access Django admin panel by navigating to /admin/ URL.
   
-- To stop the server just enter CTRL+C at any time in the console.
+- To stop the server just hit CTRL+C at any time in the console.
