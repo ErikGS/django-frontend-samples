@@ -4,7 +4,7 @@
 - A simple Svelte SPA;
 - A simple HTMX SPA.
 
-Just start the server, go to 'localhost:8000' and use the links to switch between apps: HTMX, Svelte, API-Response.
+Just start the server, go to 'localhost:8000' and use the links to switch between apps: HTMX, Svelte, REST-Api.
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ Just start the server, go to 'localhost:8000' and use the links to switch betwee
   ```bash
   poetry install
   ```
-  *Poetry will install all dependencies in a isolated virtual environment;
+  *Poetry will install all dependencies in an isolated virtual environment;
   
 - After everything is installed, open the virtual env. shell and initialize the DB with:
   ```bash
@@ -40,7 +40,7 @@ Just start the server, go to 'localhost:8000' and use the links to switch betwee
   ```bash
   Starting development server at http://127.0.0.1:8000/
   ```
-  Visit the addres and after logged-in, you should see a simple static page displaying a 'hello world' message!
+  Visit the addres and you should see a simple static page displaying a 'hello world' message. You will be prompetd to login the first time you open an app, use the account you created earlier.
 
 - Use the links to switch front-ends, or click REST-API to see the API response from Django! It should look like this:
   ```json
@@ -54,5 +54,7 @@ Just start the server, go to 'localhost:8000' and use the links to switch betwee
     "detail": "Authentication credentials were not provided."
   }
   ```
+  
+- You can also access Django admin panel by navigating to /admin/ URL.
   
 - To stop the server just enter CTRL+C at any time in the console.
